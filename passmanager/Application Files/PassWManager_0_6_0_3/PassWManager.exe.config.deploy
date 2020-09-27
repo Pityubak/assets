@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="PassWManager.Properties.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+  </startup>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <connectionStrings>
+    <add name="passManagerDBEntities" connectionString="metadata=res://*/PassModel.csdl|res://*/PassModel.ssdl|res://*/PassModel.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\passManagerDB.mdf;integrated security=True;connect timeout=30;MultipleActiveResultSets=True;App=EntityFramework&quot;"
+      providerName="System.Data.EntityClient" />
+    <add name="PassWManager.Properties.Settings.passManagerDBConnectionString"
+      connectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\passManagerDB.mdf;Integrated Security=True;Connect Timeout=30"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+
+  <userSettings>
+    <PassWManager.Properties.Settings>
+      <setting name="firstTime" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="checked_Path" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="LocateX" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="LocateY" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="Lang" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="Skin" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="Sounds" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="Rewrite" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="popup" serializeAs="String">
+        <value>True</value>
+      </setting>
+    </PassWManager.Properties.Settings>
+  </userSettings>
+  <appSettings>
+    <add key="ClientSettingsProvider.ServiceUri" value="" />
+    <add key="ClientSettingsProvider.ConnectionStringName" value="DefaultConnection" />
+  </appSettings>
+  <system.web>
+    <membership defaultProvider="ClientAuthenticationMembershipProvider">
+      <providers>
+        <add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" connectionStringName="DefaultConnection" credentialsProvider="" />
+      </providers>
+    </membership>
+    <roleManager defaultProvider="ClientRoleProvider" enabled="true">
+      <providers>
+        <add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" connectionStringName="DefaultConnection" />
+      </providers>
+    </roleManager>
+  </system.web>
+</configuration>

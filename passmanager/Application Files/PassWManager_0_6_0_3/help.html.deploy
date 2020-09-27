@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+
+<html lang="hu" >
+<head>
+    <meta charset="utf-8" />
+    <title>Help</title>
+    <style>
+        div {
+            color: #060606;
+        }
+        table {
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 2px ridge #613D25;
+            
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left
+        }
+        th {
+            background-color: #3E3E3E;
+           
+        }
+        hr {
+            display: block;
+            height: 3px;
+            float: left;
+            border-bottom: 1px thick;
+        }
+
+        ul {
+            list-style-type: none;
+            background-color: #B58C54;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-size: 25px;
+        }
+
+        li {
+            float: left
+        }
+
+            li a {
+                display: list-item;
+                text-decoration: solid;
+                padding: 10px;
+                margin-right: 30px;
+                margin-left: 30px;
+                color: aliceblue;
+                text-align: center;
+            }
+
+                li a:hover {
+                    background-color: steelblue;
+                }
+
+        .firstTag {
+            font-size: 17px;
+            font-family: 'Times New Roman';
+        }
+
+        .secondTag {
+            font-size: 16px;
+            font-style: oblique;
+        }
+    </style>
+</head>
+<body style="background-color:#46484D">
+
+
+    <ul>
+        <li><a href="#ground">Alapleírás</a></li>
+        <li><a href="#first">Első lépések</a></li>
+        <li><a href="#using">Használat</a></li>
+        <li><a href="#error">Hibaüzenetek</a></li>
+    </ul>
+    <div id="ground">
+        <br />
+        <p class="firstTag">
+            Az alkalmazás mesterjelszót
+            és kulcsfájlt kér az azonosításhoz, mindkettőt az első alkalommal kell létrehozni(bár van lehetőség ezek módosítására).
+            Ezekután lehet bejelentkezni és hozzáférni az adatbázishoz,ahol majd a felhasználónevet illetve a hozzátartozó
+            jelszavakat lehet tárolni, valamint az új jelszavak létrehozásakor, vagy a régiek cseréjekor lehetőség van a program által felkínált
+            jelszógenerátor használatára.
+        <p><hr />
+        <p class="firstTag">
+            Az alkalmazás öt alapszakaszra osztható:<br /><br />
+
+            Hozzáférés készítése-Itt készíthetjük el a fent említett kulcsot és mesterjelszót.<br /><br />
+            Bejelentkezés-A meglévő fiókba való bejelentkezés<br /><br />
+            Adatelérés-Hozzáférés tárolt adatainkhoz<br /><br />
+            Beállítások-Az alkalmazás személyre szabását tehetjük meg itt<br /><br />
+            Információ-Az alkalmazásról nyerhetünk alapvető információkat
+        <p><hr />
+
+        <p class="firstTag">
+            Lehetőség van a nyelv, illetve kinézet változtatására, a hang és popup ablakok beállítására is(ezek kikapcsolására is), valamint elérhetőek
+            a haladó beállítások is,ahol a program alapvető, titkosítási jellemzőit is meglehet változtatni.
+        </p>
+        <ul>
+            <li style="padding-left:600px"><a href="#first">Tovább</a></li>
+        </ul>
+        <br /><br />
+    </div>
+    <div id="first">
+        <p class="firstTag">
+            <br />
+            Elsőnek adjunk meg egy mesterjelszót, ez legalább nyolc karakter hosszúságú legyen,ha kevesebb a program nem fogadja el
+            ,de az ajánlások alapján tizenkét karakter és afölötti szám lenne az ideális; tartalmazzon kis és nagybetűt, számot, speciális karaktert.<hr />
+            A Wikipédia szerint:
+            <blockquote>
+                " A jelszónak nem kell igazi szónak lennie; azok a jelszavak, melyek nem valódi szavakból állnak, nehezebben feltörhetők. Vannak jelszavak, melyeket több szóból alkotnak és inkább jelmondatnak hívják őket. A jelmondat kifejezés akkor is használatos, ha a titkos információ tisztán számokból áll, mint például a személyes azonosító szám, vagy a PIN kód (Personal Identification Number) esetén, melyet a pénzautomatáknál (ATM) használunk.
+
+                Minél „értelmesebb” egy jelszó, annál könnyebb azt egy támadónak feltörni. Érdemes például egy általunk jól ismert versszak szavainak első betűjéből jelszót képezni, amit egy számmal vagy írásjellel egészítünk ki. A jelenlegi műszaki színvonalon (2013-ban) a jelszó ajánlott hosszúsága 12 karakter vagy több. Ennek feltöréséhez több évtized szükséges, tehát az ilyen jelszó gyakorlatilag feltörhetetlen. Sok jelszó megjegyzése helyett célszerű ún. jelszómenedzser programot alkalmazni, amihez egyetlen mesterjelszó szükséges, és a jelszómenedzser tárolja (titkosított módon) az összes többi jelszót a felhasználó számára, és ha szükséges, beírja azokat az egyes oldalakra való belépéshez."
+            </blockquote>
+            <hr />
+        <p class="firstTag">
+            A kulcsfájlt, ha lehetséges, külön tároljuk(usb,telefon,stb.).
+            Ki lehet választani, hogy milyen titkosítást szeretnénk használni,jelenleg az AES és a Dpapi elérhető. 
+        </p><br />
+        
+        <ul>
+            <li style="padding-left:50px"><a href="#ground">Vissza</a></li>
+            <li style="padding-left:375px"><a href="#using">Tovább</a></li>
+        </ul>
+    </div>
+    <div id="using">
+        <p class="firstTag">
+            <br />
+            Az adatbázis funkciói:hozzáadás,szerkesztés és törlés.A felugró ablakban lehetőség nyílik a különböző megadására, úgymint felhasználónév,
+            jelszó(ezt megadhatjuk magunk is vagy generáltathatunk egyet(ajánlott!),ha így döntünk, megadhatjuk, milyen hosszú is legyen a jelszavunk,s milyen karaktereket tartalmazon),url,
+            megjegyzések, lejárati dátum beállítására is van lehetőségünk.Ha így tesszünk a program jelzi, ha lejárt a jelszavunk.
+            Elérhető funkciók még a felhasználónév, jelszó, illetve az url másolása(a vágólap automatikusan törlődik), autó-gépelés, url megnyitása.
+        </p>
+        <hr />
+
+        <p class="firstTag">
+            A beállításoknál meg lehet változtatni a nyelvet(angol-magyar), valamint a kinézetet(sötét-világos).Megadhatjuk a felugró ablak  helyzetét(a  képernyő négy sarkában helyezhetjük el), beállíthajuk
+            a hangot is.<br />
+            A haladó beállításoknál a titkosításhoz fűződő lehetőségeket módosíthajuk, úgymint a kulcsfájl minden belépéskor való újraírása(ehhez kapcsolódóan a jelszót is újrahasheli),
+            a random titkosítási mód bekapcsolása(ez azt jelenti, hogy az újraírás során véletlenszerúen választja ki a kulcsfájlhoz tartozó tikosítást, valamint a hasheléshez használt entrópiát),
+            új mesterjelszó létrehozása,
+            kikapcsolhatjuk a felugró ablakot is, ha túlságosan zavarókká válnának.A haladó beállítások módosítása biztonsági szempontból nem ajánlott!<br />
+
+            Az információs fülön rövid leírás található, illetve link az alkotó oldalára, az alkalmazás logója és egy súgó gomb,ami ide vezet:)
+        </p>
+        <hr />
+        <p class="secondTag">
+            Ez a program jelenleg béta tesztelési fázisban jár! Az esetleg felmerülő hibákért felelőséget nem vállal a készítő!
+            Mindenki saját belátása szerint használja!
+        </p>
+        <ul>
+            <li style="padding-left:50px"><a href="#first">Vissza</a></li>
+            <li style="padding-left:375px"><a href="#error">Tovább</a></li>
+        </ul>
+
+
+    </div>
+    <div id="error">
+        <br />
+        
+        <table>
+            <caption style="font-size:27px;padding:12px">Hibalehetőségek</caption>
+
+            <tr>
+                <th>Hiba típusa</th>
+                <th>Hiba leírása</th>
+                <th>Megoldási javaslatok</th>
+            </tr>
+            <tr>
+                <td>Titkosítási hiba</td>
+                <td>Akkor jelentkezik, ha  a jelszó vagy a kulcsfájl nem megfelelő vagy a titkosítási típus nem megfelelő</td>
+                <td>Próbálja újra beírni a jelszavát!Ellenőrizze a kulcsfájl elérési útja helyesen van-e megadva!</td>
+            </tr>
+            <tr>
+
+                <td>Bejelentkezési hiba</td>
+                <td>Akkor jelentkezik, ha  a jelszó vagy a kulcsfájl nem megfelelő</td>
+                <td>Próbálja újra beírni a jelszavát!Ellenőrizze a kulcsfájl elérési útja helyesen van-e megadva!</td>
+            </tr>
+            <tr>
+                <td>Kapcsolódási hiba</td>
+                <td>Akkor jelentkezik, ha  a  program nem éri el az adatbázist</td>
+                <td>Ellenőrizze fut-e az SQL Server.Indítsa el vagy újra, ha szükséges!</td>
+            </tr>
+            <tr>
+                <td>Érték hiba</td>
+                <td>Akkor jelentkezik, ha olyan értékeket szeretnénk másolni,amik nem léteznek</td>
+                <td>Győzödjön meg, hogy létező értéket akar-e másolni</td>
+            </tr>
+        </table>
+        <br />
+       
+        <ul>
+            <li style="padding-left:50px"><a href="#using">Vissza</a></li>
+
+        </ul>
+    </div>
+</body>
+</html>
